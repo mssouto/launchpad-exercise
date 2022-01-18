@@ -8,7 +8,6 @@ const actions = [
     { label: 'Unfollow', name: 'unfollow' },
 ];
 
-
 export default class ObjectTableWithActions extends LightningElement {
     @track data = [];
     @track columnsInfo = [];
@@ -19,9 +18,6 @@ export default class ObjectTableWithActions extends LightningElement {
     @api whereCondition;
 
     async connectedCallback() {
-
-        console.log("paso aca");
-        
         this.data = await fetchData({   objectName: this.objectName,
                                         selectFields: this.selectFields,
                                         whereCondition: this.whereCondition
@@ -61,9 +57,7 @@ export default class ObjectTableWithActions extends LightningElement {
     }
 
     handleRowAction(event) {
-        console.log("data", event.detail);
         const actionName = event.detail.action.name;
-        //const recordId = event.detail.row.Id;
         switch (actionName) {
             case 'follow':
                 followRecord({recordId : event.detail.row.Id});

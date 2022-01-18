@@ -10,7 +10,6 @@ public with sharing class ObjectTableWithActionsHelper {
         List<sObject> sobjList = Database.query(queryString);
         return sobjList;
     }
-
     public static void sendCustomNotification (Id recordId, String title, String description) {
         Id userId = UserInfo.getUserId();
         Messaging.CustomNotification notification = new Messaging.CustomNotification();

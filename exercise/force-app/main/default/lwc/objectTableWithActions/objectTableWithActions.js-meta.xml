@@ -15,17 +15,25 @@
             <property label="Object Where Condition" name="whereCondition" type="String" />
         </targetConfig>
     </targetConfigs>
-</LightningComponentBundle><!-- 
+</LightningComponentBundle> <!-- 
 // CASE
+
 // config for columns field
 
-[{ "label": "Case Number", "fieldName": "Id", "type": "url", "typeAttributes":{"label": { "fieldName": "CaseNumber" }}},      {"label": "Age", "fieldName": "Case_Age__c", "type": "text" },      {"label": "Case Owner", "fieldName": "OwnerId", "type": "url", "typeAttributes":{"label": { "fieldName": "Case_Owner_Name__c" }}},      {"label": "Priority", "fieldName": "Priority", "type": "text" },      {"label": "Priority Color", "fieldName": "Priority_Color__c", "type": "text" },{"type": "action","typeAttributes": { "rowActions": "actions" }}]
+[{ "label": "Case Number", "fieldName": "Case_URL__c", "type": "url", "typeAttributes":{"label": { "fieldName": "CaseNumber" }}},      {"label": "Age", "fieldName": "Case_Age__c", "type": "text" },      {"label": "Case Owner", "fieldName": "User_URL__c", "type": "url", "typeAttributes":{"label": { "fieldName": "Case_Owner_Name__c" }}},      {"label": "Priority", "fieldName": "Priority", "type": "text" }]
 
 
-// config for field nameS
+// config for field names
 
-CaseNumber, Case_Age__c, OwnerId, Case_Owner_Name__c, Priority, Priority_Color__c
-//
+CaseNumber, Case_Age__c, OwnerId, Case_Owner_Name__c, Priority,User_URL__c,Case_URL__c
 
-[{ "label": "Case Number", "fieldName": "Id", "type": "url", "typeAttributes":{"label": { "fieldName": "CaseNumber" }}},      {"label": "Age", "fieldName": "Case_Age__c", "type": "text" },      {"label": "Case Owner", "fieldName": "OwnerId", "type": "url", "typeAttributes":{"label": { "fieldName": "Case_Owner_Name__c" }}},      {"label": "Priority", "fieldName": "Priority", "type": "text" },      {"label": "Priority Color", "fieldName": "Priority_Color__c", "type": "text" }]
+// ACCOUNT
+
+// config for columns field
+
+[{ "label": "Account Name", "fieldName": "Account_URL__c", "type": "url", "typeAttributes":{"label": { "fieldName": "Name" }}},      {"label": "Phone", "fieldName": "Phone" },  {"label": "Account Number", "fieldName": "AccountNumber"}, {"label": "Type", "fieldName": "Priority", "type": "text" }]
+
+// config for field names
+
+Name, AccountNumber, Phone, Type, Account_URL__c
 -->
