@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomNotificationType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customNotifTypeName>Follow Case Action</customNotifTypeName>
+    <customNotifTypeName>Follow Action</customNotifTypeName>
     <desktop>true</desktop>
-    <masterLabel>Follow Case Action</masterLabel>
+    <masterLabel>Follow Action</masterLabel>
     <mobile>true</mobile>
 </CustomNotificationType>

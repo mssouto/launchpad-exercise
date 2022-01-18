@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__HomePage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage,lightning__AppPage,lightning__FlowScreen">
+            <property label="Object Name" name="objectName" type="String" />
+            <property label="Column Names" name="columns" type="String" />
+            <property label="Object Select Fields" name="selectFields" type="String" />
+            <property label="Object Where Condition" name="whereCondition" type="String" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle><!-- 
+// CASE
+// config for columns field
+
+[{ "label": "Case Number", "fieldName": "Id", "type": "url", "typeAttributes":{"label": { "fieldName": "CaseNumber" }}},      {"label": "Age", "fieldName": "Case_Age__c", "type": "text" },      {"label": "Case Owner", "fieldName": "OwnerId", "type": "url", "typeAttributes":{"label": { "fieldName": "Case_Owner_Name__c" }}},      {"label": "Priority", "fieldName": "Priority", "type": "text" },      {"label": "Priority Color", "fieldName": "Priority_Color__c", "type": "text" },{"type": "action","typeAttributes": { "rowActions": "actions" }}]
+
+
+// config for field nameS
+
+CaseNumber, Case_Age__c, OwnerId, Case_Owner_Name__c, Priority, Priority_Color__c
+//
+
+[{ "label": "Case Number", "fieldName": "Id", "type": "url", "typeAttributes":{"label": { "fieldName": "CaseNumber" }}},      {"label": "Age", "fieldName": "Case_Age__c", "type": "text" },      {"label": "Case Owner", "fieldName": "OwnerId", "type": "url", "typeAttributes":{"label": { "fieldName": "Case_Owner_Name__c" }}},      {"label": "Priority", "fieldName": "Priority", "type": "text" },      {"label": "Priority Color", "fieldName": "Priority_Color__c", "type": "text" }]
+-->
