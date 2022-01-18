@@ -22,14 +22,42 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>dashboardName</name>
-                    <value>YudxrZFrUgHiOtWqIscHZZpyVOgYSe</value>
+                    <name>columns</name>
+                    <value>[{ &quot;label&quot;: &quot;Case Number&quot;, &quot;fieldName&quot;: &quot;Case_URL__c&quot;, &quot;type&quot;: &quot;url&quot;, &quot;typeAttributes&quot;:{&quot;label&quot;: { &quot;fieldName&quot;: &quot;CaseNumber&quot; }}},      {&quot;label&quot;: &quot;Age&quot;, &quot;fieldName&quot;: &quot;Case_Age__c&quot;, &quot;type&quot;: &quot;text&quot; },      {&quot;label&quot;: &quot;Case Owner&quot;, &quot;fieldName&quot;: &quot;User_URL__c&quot;, &quot;type&quot;: &quot;url&quot;, &quot;typeAttributes&quot;:{&quot;label&quot;: { &quot;fieldName&quot;: &quot;Case_Owner_Name__c&quot; }}},      {&quot;label&quot;: &quot;Priority&quot;, &quot;fieldName&quot;: &quot;Priority&quot;, &quot;type&quot;: &quot;text&quot; }]</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>hideOnError</name>
-                    <value>true</value>
+                    <name>objectName</name>
+                    <value>Case</value>
                 </componentInstanceProperties>
-                <componentName>desktopDashboards:embeddedDashboard</componentName>
+                <componentInstanceProperties>
+                    <name>selectFields</name>
+                    <value>CaseNumber, Case_Age__c, OwnerId, Case_Owner_Name__c, Priority,User_URL__c,Case_URL__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>whereCondition</name>
+                </componentInstanceProperties>
+                <componentName>objectTableWithActions</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>[{ &quot;label&quot;: &quot;Account Name&quot;, &quot;fieldName&quot;: &quot;Account_URL__c&quot;, &quot;type&quot;: &quot;url&quot;, &quot;typeAttributes&quot;:{&quot;label&quot;: { &quot;fieldName&quot;: &quot;Name&quot; }}},      {&quot;label&quot;: &quot;Phone&quot;, &quot;fieldName&quot;: &quot;Phone&quot; },  {&quot;label&quot;: &quot;Account Number&quot;, &quot;fieldName&quot;: &quot;AccountNumber&quot;}, {&quot;label&quot;: &quot;Type&quot;, &quot;fieldName&quot;: &quot;Type&quot;, &quot;type&quot;: &quot;text&quot; }]</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>objectName</name>
+                    <value>Account</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>selectFields</name>
+                    <value>Name, AccountNumber, Phone, Type, Account_URL__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>whereCondition</name>
+                    <value>Name LIKE &apos;Account%&apos;</value>
+                </componentInstanceProperties>
+                <componentName>objectTableWithActions</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -37,31 +65,11 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>home:eventContainer</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>home:recentRecordContainer</componentName>
-            </componentInstance>
-        </itemInstances>
         <mode>Replace</mode>
         <name>bottomLeft</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>runtime_sales_activities:todayTaskContainer</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>home:topDealsContainer</componentName>
-            </componentInstance>
-        </itemInstances>
         <mode>Replace</mode>
         <name>bottomRight</name>
         <type>Region</type>
@@ -70,6 +78,21 @@
         <itemInstances>
             <componentInstance>
                 <componentName>home:assistant</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>home:eventContainer</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>home:topDealsContainer</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
